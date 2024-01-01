@@ -4,8 +4,8 @@
   "main": "src/app.js",
   "type": "module",
   "scripts": {
-    "start": "nodemon app.js",
-    "dev": "npx pm2 src/app.js"
+    "dev": "nodemon app.js",
+    "start": "npx pm2 src/app.js"
   },
   "keywords": [],
   "author": "",
