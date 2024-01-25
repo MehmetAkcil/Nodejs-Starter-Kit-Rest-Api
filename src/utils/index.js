@@ -12,12 +12,10 @@ export const generateCronToken = () => {
 }
 export const moneyFormat = (amount, currency = 'TL') => {
     // Para birimi sembolünü ve binlik ayırıcıyı ekleyin
-    const formattedAmount = new Intl.NumberFormat('tr-TR', {
+    return new Intl.NumberFormat('tr-TR', {
         style: 'currency',
         currency: currency,
     }).format(amount);
-
-    return formattedAmount;
 }
 export const convertToSeoUrl = (name) => {
     const turkishChars = { 'ı': 'i', 'İ': 'I', 'ş': 's', 'Ş': 'S', 'ğ': 'g', 'Ğ': 'G', 'ü': 'u', 'Ü': 'U', 'ö': 'o', 'Ö': 'O', 'ç': 'c', 'Ç': 'C' };

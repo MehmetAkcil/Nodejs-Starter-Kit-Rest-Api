@@ -57,10 +57,8 @@ export const generateImageFileLink = async (req) => {
 
 
 export const deleteFileByLink = async (req, fileLink) => {
-    try {
-        const filePath = fileLink.replace(process.env.SITE_URL, '');
-        await fs.unlink(filePath);
-    } catch (err) {
-        console.error('Dosya silinirken bir hata oluştu:', err);
+    const filePath = fileLink.replace(process.env.SITE_URL, '');
+    if (fs.existsSync(filePath)) {
+        await fs.unlinkSync(filePath);
     }
 };

@@ -2,7 +2,6 @@ import {Sequelize} from "sequelize";
 import dotenv from 'dotenv'
 dotenv.config()
 
-
 const {
     DB_NAME,
     DB_USER,
@@ -16,6 +15,7 @@ const sequelize = new Sequelize(DB_NAME, DB_USER, DB_PASS, {
     host: DB_HOST,
     dialect: DB_DIALECT,
     logging: DB_LOGGING === 'true',
+    timezone: "+03:00"
 });
 
 export default sequelize
